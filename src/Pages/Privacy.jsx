@@ -1,7 +1,7 @@
 export default function Privacy() {
   return (
-    <section className="bg-cream min-h-[70vh] pt-[120px] pb-20 px-[5%]">
-      <div className="max-w-[800px] mx-auto rv">
+    <section className="bg-cream min-h-[70vh] pt-30 pb-20 px-[5%]">
+      <div className="max-w-200 mx-auto rv">
         <div className="text-[0.67rem] font-bold tracking-[0.12em] uppercase text-gold mb-[0.6rem]">
           Legal
         </div>

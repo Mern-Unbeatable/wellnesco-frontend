@@ -1,16 +1,32 @@
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 
 export default function Navbar() {
+  const { pathname, hash } = useLocation();
+
   const scrollToApp = () => {
     document.getElementById('appsec')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const getLinkClass = (path, targetHash = '') => {
+    let isActive = false;
+    if (targetHash) {
+      isActive = pathname === '/' && hash === targetHash;
+    } else {
+      isActive = pathname === path;
+    }
+    return `text-[0.84rem] font-medium transition duration-200 hover:text-deep pb-[2px] ${
+      isActive 
+        ? 'text-deep border-b-[2px] border-gold' 
+        : 'text-mid border-b-[2px] border-transparent'
+    }`;
   };
 
   return (
     <nav
       id="nav"
-      className="fixed top-0 left-0 right-0 z-[300] h-[66px] px-[5%] flex items-center justify-between bg-white/92 backdrop-blur-[18px] border-b border-golddim transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-300 h-16.5 px-[5%] flex items-center justify-between bg-white/92 backdrop-blur-[18px] border-b border-golddim transition-all duration-300"
     >
-      <Link to="/" className="flex items-center gap-[9px] cursor-pointer no-underline">
+      <Link to="/" className="flex items-center gap-2.25 cursor-pointer no-underline">
         <svg width="32" height="32" viewBox="0 0 120 120" fill="none">
           <circle cx="60" cy="60" r="54" stroke="#9a7248" strokeWidth="4.5" fill="none" />
           <path d="M26 82C26 50 54 36 54 36S32 62 54 80C32 74 26 82 26 82Z" fill="#7a8f58" />
@@ -35,19 +51,19 @@ export default function Navbar() {
         </span>
       </Link>
       
-      <div className="hidden md:flex gap-[1.8rem]">
-        <Link to="/services" className="text-[0.84rem] font-medium text-mid transition duration-200 hover:text-deep">Services</Link>
-        <a href="/#bodyscore" className="text-[0.84rem] font-medium text-mid transition duration-200 hover:text-deep">Body Score</a>
-        <a href="/#safety" className="text-[0.84rem] font-medium text-mid transition duration-200 hover:text-deep">Safety</a>
-        <a href="/#membership" className="text-[0.84rem] font-medium text-mid transition duration-200 hover:text-deep">Membership</a>
-        <Link to="/providers" className="text-[0.84rem] font-medium text-mid transition duration-200 hover:text-deep">For Providers</Link>
+      <div className="hidden md:flex gap-[1.8rem] items-center pt-1">
+        <Link to="/services" className={getLinkClass('/services')}>Services</Link>
+        <Link to="/#bodyscore" className={getLinkClass('/', '#bodyscore')}>Body Score</Link>
+        <Link to="/#safety" className={getLinkClass('/', '#safety')}>Safety</Link>
+        <Link to="/#membership" className={getLinkClass('/', '#membership')}>Membership</Link>
+        <Link to="/providers" className={getLinkClass('/providers')}>For Providers</Link>
       </div>
       
       <div className="flex gap-[0.6rem] items-center">
 
         <button
           onClick={scrollToApp}
-          className="bg-sage text-white border-none rounded-full px-[1.25rem] py-[0.5rem] font-sans text-[0.82rem] font-bold cursor-pointer transition duration-200 hover:bg-sagelt hover:text-deep"
+          className="bg-sage text-white border-none rounded-full px-5 py-2 font-sans text-[0.82rem] font-bold cursor-pointer transition duration-200 hover:bg-sagelt hover:text-deep"
         >
           Get the app
         </button>

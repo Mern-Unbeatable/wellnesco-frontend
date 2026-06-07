@@ -12,6 +12,16 @@ function App() {
   }, [location.pathname]);
 
   useEffect(() => {
+    if (!location.hash) return;
+
+    const sectionId = location.hash.slice(1);
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location.pathname, location.hash]);
+
+  useEffect(() => {
     // Re-run observer when pathname changes so new elements get revealed
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
