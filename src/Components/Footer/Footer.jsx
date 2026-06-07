@@ -7,8 +7,9 @@ export default function Footer() {
     e.preventDefault();
     Swal.fire({
       title: "Coming Soon!",
-      text: "This page is currently under development.",
+      text: "This feature is currently under development.",
       icon: "info",
+      iconColor: "#2A1A0E",
       confirmButtonColor: "#9a7248",
     });
   };
@@ -120,15 +121,15 @@ export default function Footer() {
               Membership
             </a>
             <a
-              href="/#appsec"
-              onClick={(e) => handleHashClick(e, '#appsec')}
+              href="#"
+              onClick={handleComingSoon}
               className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt"
             >
               WellnessGo Shop
             </a>
             <a
-              href="/#membership"
-              onClick={(e) => handleHashClick(e, '#membership')}
+              href="#"
+              onClick={handleComingSoon}
               className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt"
             >
               Rewards
@@ -148,8 +149,8 @@ export default function Footer() {
               Hotel Partners
             </a>
             <a
-              href="/#membership"
-              onClick={(e) => handleHashClick(e, '#membership')}
+              href="#"
+              onClick={handleComingSoon}
               className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt"
             >
               Inner Circle
