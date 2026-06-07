@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f5ede3;
+  --color-warm: #ede4d8;
+  --color-parch: #e0d3c2;
+  --color-deep: #2a1a0e;
+  --color-mid: #5a3e28;
+  --color-soft: #9a7a5a;
+  --color-muted: #c4ae98;
+  --color-gold: #9a7248;
+  --color-goldlt: #c09a68;
+  --color-golddim: rgba(154, 114, 72, 0.1);
+  --color-sage: #7a8f58;
+  --color-sagelt: #a0b878;
+  --color-sagedim: rgba(122, 143, 88, 0.1);
+  --color-blush: #c4897a;
+  --color-blushdim: rgba(196, 137, 122, 0.08);
+
+  --shadow-sh: 0 2px 16px rgba(42, 26, 14, 0.06);
+  --shadow-sm: 0 8px 32px rgba(42, 26, 14, 0.09);
+  --shadow-sl: 0 20px 60px rgba(42, 26, 14, 0.13);
+
+  --radius-r: 14px;
+  --radius-rl: 20px;
+  --radius-rxl: 28px;
+
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'DM Sans', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-mid bg-white overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .hero-img-overlay {
+    background: linear-gradient(to right, var(--color-cream) 0%, transparent 20%);
+  }
+  .app-glow {
+    background: radial-gradient(ellipse, rgba(122,143,88,.1) 0%, transparent 65%);
+  }
+}
+
+@keyframes pulse-custom {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.animate-pulse-custom {
+  animation: pulse-custom 2s infinite;
+}
+.animate-pulse-fast {
+  animation: pulse-custom 1.8s infinite;
+}
+
+/* Animations from HTML for reveal */
+.rv {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+.d1 { transition-delay: 0.08s; }
+.d2 { transition-delay: 0.16s; }
+.d3 { transition-delay: 0.24s; }
+.d4 { transition-delay: 0.32s; }
