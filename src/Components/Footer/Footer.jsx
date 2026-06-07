@@ -1,10 +1,12 @@
+import { Link } from 'react-router';
+
 export default function Footer() {
   return (
     <footer className="bg-deep p-[3.5rem_5%_2rem]">
-      <div className="max-w-[1360px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-[3rem] pb-[2.5rem] border-b border-[rgba(255,255,255,0.06)]">
+      <div className="max-w-[1360px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-[3rem] pb-[2.5rem] border-b border-[rgba(255,255,255,0.06)]">
         
         <div>
-          <div className="flex items-center gap-[9px] mb-[0.7rem] cursor-pointer">
+          <Link to="/" className="flex items-center gap-[9px] mb-[0.7rem] cursor-pointer no-underline">
             <svg width="28" height="28" viewBox="0 0 120 120" fill="none">
               <circle cx="60" cy="60" r="54" stroke="#9a7248" strokeWidth="4.5" fill="none" />
               <path d="M26 82C26 50 54 36 54 36S32 62 54 80C32 74 26 82 26 82Z" fill="#7a8f58" />
@@ -27,7 +29,7 @@ export default function Footer() {
             <span className="font-serif text-[1.25rem] font-medium text-[rgba(245,237,227,0.8)]">
               wellness<span className="text-sagelt">go</span>
             </span>
-          </div>
+          </Link>
           <p className="text-[0.8rem] text-[rgba(255,255,255,0.27)] leading-[1.65] max-w-[220px] mb-[1rem]">
             Your luxury at-home wellness concierge. Licensed professionals delivered to you — after hours, on demand, anywhere.
           </p>
@@ -51,44 +53,24 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="text-[0.63rem] font-bold tracking-[0.1em] uppercase text-[rgba(255,255,255,0.28)] mb-[0.9rem]">Services</div>
-          <div className="flex flex-col gap-[0.42rem]">
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">IV & Nursing</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Pilates & Yoga</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Massage</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Aesthetics</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Concierge Medicine</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Women's Health</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Peptide Programme</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Meal Prep</a>
-          </div>
-        </div>
-
-        <div>
           <div className="text-[0.63rem] font-bold tracking-[0.1em] uppercase text-[rgba(255,255,255,0.28)] mb-[0.9rem]">Platform</div>
           <div className="flex flex-col gap-[0.42rem]">
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Body Score</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Safety System</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Membership</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">WellnessGo Shop</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Rewards</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Annual Retreat</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Hotel Partners</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Inner Circle</a>
+            <a href="/#bodyscore" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Body Score</a>
+            <a href="/#safety" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Safety System</a>
+            <a href="/#membership" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Membership</a>
+            <a href="/#appsec" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">WellnessGo Shop</a>
+            <a href="/#membership" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Rewards</a>
+            <a href="/#membership" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Inner Circle</a>
           </div>
         </div>
 
         <div>
           <div className="text-[0.63rem] font-bold tracking-[0.1em] uppercase text-[rgba(255,255,255,0.28)] mb-[0.9rem]">Company</div>
           <div className="flex flex-col gap-[0.42rem]">
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">About</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">For Providers</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">For Hotels</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Careers</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Press</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Privacy Policy</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Terms</a>
-            <a href="#" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">HIPAA Notice</a>
+            <Link to="/about" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">About</Link>
+            <Link to="/providers" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">For Providers</Link>
+            <Link to="/privacy" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Privacy Policy</Link>
+            <Link to="/terms" className="text-[0.8rem] text-[rgba(255,255,255,0.3)] transition duration-150 hover:text-sagelt">Terms of Service</Link>
           </div>
         </div>
         
@@ -97,10 +79,8 @@ export default function Footer() {
       <div className="max-w-[1360px] mx-auto mt-[1.5rem] flex justify-between items-center flex-wrap gap-[1rem]">
         <p className="text-[0.73rem] text-[rgba(255,255,255,0.18)]">© 2026 WellnessGo · Not Just a Booking App. A Lifestyle.</p>
         <div className="flex gap-[1.25rem]">
-          <a href="#" className="text-[0.73rem] text-[rgba(255,255,255,0.18)] transition duration-150 hover:text-[rgba(255,255,255,0.4)]">Privacy</a>
-          <a href="#" className="text-[0.73rem] text-[rgba(255,255,255,0.18)] transition duration-150 hover:text-[rgba(255,255,255,0.4)]">Terms</a>
-          <a href="#" className="text-[0.73rem] text-[rgba(255,255,255,0.18)] transition duration-150 hover:text-[rgba(255,255,255,0.4)]">HIPAA</a>
-          <a href="#" className="text-[0.73rem] text-[rgba(255,255,255,0.18)] transition duration-150 hover:text-[rgba(255,255,255,0.4)]">Cookies</a>
+          <Link to="/privacy" className="text-[0.73rem] text-[rgba(255,255,255,0.18)] transition duration-150 hover:text-[rgba(255,255,255,0.4)]">Privacy</Link>
+          <Link to="/terms" className="text-[0.73rem] text-[rgba(255,255,255,0.18)] transition duration-150 hover:text-[rgba(255,255,255,0.4)]">Terms</Link>
         </div>
       </div>
     </footer>

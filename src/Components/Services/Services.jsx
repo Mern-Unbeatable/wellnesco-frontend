@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 export default function Services() {
   const servicesData = [
     {
@@ -69,7 +71,7 @@ export default function Services() {
               <i className="italic text-sage">Nothing compromised.</i>
             </h2>
           </div>
-          <a href="#" className="text-[0.84rem] font-semibold text-gold hidden sm:block">See all services →</a>
+          <Link to="/services" className="text-[0.84rem] font-semibold text-gold hidden sm:block">See all services →</Link>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1.2rem] rv">
@@ -79,8 +81,7 @@ export default function Services() {
               <div className="p-[14px_16px]">
                 <div className="text-[0.92rem] font-bold text-deep mb-[3px]">{svc.name}</div>
                 <div className="text-[0.71rem] text-soft mb-[8px]">{svc.cat}</div>
-                <div className="flex items-center justify-between">
-                  <span className="text-[0.84rem] font-bold text-deep">{svc.price}</span>
+                <div className="flex items-center justify-end">
                   <span className="bg-sagedim rounded-full px-[0.55rem] py-[0.12rem] text-[0.63rem] font-semibold text-sage flex items-center gap-[0.3rem] before:content-[''] before:w-[5px] before:h-[5px] before:rounded-full before:bg-sage">
                     {svc.pill}
                   </span>
@@ -91,7 +92,7 @@ export default function Services() {
         </div>
         
         <div className="mt-4 sm:hidden text-center">
-          <a href="#" className="text-[0.84rem] font-semibold text-gold">See all services →</a>
+          <Link to="/services" className="text-[0.84rem] font-semibold text-gold">See all services →</Link>
         </div>
       </div>
     </section>

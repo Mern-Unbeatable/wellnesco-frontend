@@ -1,21 +1,18 @@
 import Navbar from './Components/Navbar/Navbar';
-import Hero from './Components/Hero/Hero';
-import TrustBar from './Components/TrustBar/TrustBar';
-import Stats from './Components/Stats/Stats';
-import HowItWorks from './Components/HowItWorks/HowItWorks';
-import Services from './Components/Services/Services';
-import Lifestyle from './Components/Lifestyle/Lifestyle';
-import BodyScore from './Components/BodyScore/BodyScore';
-import Safety from './Components/Safety/Safety';
-import Membership from './Components/Membership/Membership';
-import Provider from './Components/Provider/Provider';
-import AppCTA from './Components/AppCTA/AppCTA';
 import Footer from './Components/Footer/Footer';
+import { Outlet, useLocation } from 'react-router';
 import { useEffect } from 'react';
 
 function App() {
+  const location = useLocation();
+
   useEffect(() => {
-    // Simple intersection observer for reveal animations like the original HTML
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    // Re-run observer when pathname changes so new elements get revealed
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -24,25 +21,18 @@ function App() {
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+    const elements = document.querySelectorAll('.rv');
+    elements.forEach(el => observer.observe(el));
 
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
 
   return (
-    <div className="font-sans text-mid bg-white overflow-x-hidden">
+    <div className="font-sans text-mid bg-white overflow-x-hidden min-h-screen flex flex-col">
       <Navbar />
-      <Hero />
-      <TrustBar />
-      <Stats />
-      <HowItWorks />
-      <Services />
-      <Lifestyle />
-      <BodyScore />
-      <Safety />
-      <Membership />
-      <Provider />
-      <AppCTA />
+      <main className="flex-1">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
