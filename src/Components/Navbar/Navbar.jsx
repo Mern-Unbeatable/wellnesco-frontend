@@ -1,18 +1,80 @@
-import { Link, useLocation } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Navbar() {
-  const { pathname, hash } = useLocation();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const [activeSection, setActiveSection] = useState('');
+  const activeSectionRef = useRef('');
+
+  useEffect(() => {
+    if (pathname !== '/') return;
+
+    const handleScroll = () => {
+      const sections = ['bodyscore', 'safety', 'membership', 'providers'];
+      let current = '';
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Use the top third of the screen as the intersection trigger line
+          const triggerLine = window.innerHeight / 3;
+          if (rect.top <= triggerLine && rect.bottom >= triggerLine) {
+            current = section;
+            break;
+          }
+        }
+      }
+      
+      if (current !== activeSectionRef.current) {
+        activeSectionRef.current = current;
+        setActiveSection(current);
+        
+        // Update URL hash seamlessly as we scroll past sections
+        const newUrl = current ? `/#${current}` : '/';
+        if (window.location.hash !== `#${current}` && window.location.pathname === '/') {
+          window.history.replaceState(null, '', newUrl);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Trigger once on mount
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [pathname]);
 
   const scrollToApp = () => {
     document.getElementById('appsec')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleNavClick = (e, targetHash) => {
+    e.preventDefault();
+    const sectionId = targetHash.slice(1);
+    
+    if (pathname !== '/') {
+      navigate('/' + targetHash);
+    } else {
+      const target = document.getElementById(sectionId);
+      if (target) {
+        // Adjust for navbar height (approx 66px) if desired, but scrollIntoView usually works well enough
+        // Or you can use a smooth scroll library, but native smooth scroll is fine.
+        target.scrollIntoView({ behavior: 'smooth' });
+        // Update URL to match standard anchor behavior
+        window.history.pushState(null, '', '/' + targetHash);
+        activeSectionRef.current = sectionId;
+        setActiveSection(sectionId);
+      }
+    }
+  };
+
   const getLinkClass = (path, targetHash = '') => {
     let isActive = false;
     if (targetHash) {
-      isActive = pathname === '/' && hash === targetHash;
+      isActive = pathname === '/' && activeSection === targetHash.slice(1);
     } else {
-      isActive = pathname === path;
+      isActive = pathname === path && !activeSection;
     }
     return `text-[0.84rem] font-medium transition duration-200 hover:text-deep pb-[2px] ${
       isActive 
@@ -26,7 +88,7 @@ export default function Navbar() {
       id="nav"
       className="fixed top-0 left-0 right-0 z-300 h-16.5 px-[5%] flex items-center justify-between bg-white/92 backdrop-blur-[18px] border-b border-golddim transition-all duration-300"
     >
-      <Link to="/" className="flex items-center gap-2.25 cursor-pointer no-underline">
+      <Link to="/" onClick={() => setActiveSection('')} className="flex items-center gap-2.25 cursor-pointer no-underline">
         <svg width="32" height="32" viewBox="0 0 120 120" fill="none">
           <circle cx="60" cy="60" r="54" stroke="#9a7248" strokeWidth="4.5" fill="none" />
           <path d="M26 82C26 50 54 36 54 36S32 62 54 80C32 74 26 82 26 82Z" fill="#7a8f58" />
@@ -52,15 +114,14 @@ export default function Navbar() {
       </Link>
       
       <div className="hidden md:flex gap-[1.8rem] items-center pt-1">
-        <Link to="/services" className={getLinkClass('/services')}>Services</Link>
-        <Link to="/#bodyscore" className={getLinkClass('/', '#bodyscore')}>Body Score</Link>
-        <Link to="/#safety" className={getLinkClass('/', '#safety')}>Safety</Link>
-        <Link to="/#membership" className={getLinkClass('/', '#membership')}>Membership</Link>
-        <Link to="/providers" className={getLinkClass('/providers')}>For Providers</Link>
+        <Link to="/services" onClick={() => setActiveSection('')} className={getLinkClass('/services')}>Services</Link>
+        <a href="/#bodyscore" onClick={(e) => handleNavClick(e, '#bodyscore')} className={getLinkClass('/', '#bodyscore')}>Body Score</a>
+        <a href="/#safety" onClick={(e) => handleNavClick(e, '#safety')} className={getLinkClass('/', '#safety')}>Safety</a>
+        <a href="/#membership" onClick={(e) => handleNavClick(e, '#membership')} className={getLinkClass('/', '#membership')}>Membership</a>
+        <a href="/#providers" onClick={(e) => handleNavClick(e, '#providers')} className={getLinkClass('/', '#providers')}>For Providers</a>
       </div>
       
       <div className="flex gap-[0.6rem] items-center">
-
         <button
           onClick={scrollToApp}
           className="bg-sage text-white border-none rounded-full px-5 py-2 font-sans text-[0.82rem] font-bold cursor-pointer transition duration-200 hover:bg-sagelt hover:text-deep"

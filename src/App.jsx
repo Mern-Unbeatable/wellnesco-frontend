@@ -14,11 +14,14 @@ function App() {
   useEffect(() => {
     if (!location.hash) return;
 
-    const sectionId = location.hash.slice(1);
-    const target = document.getElementById(sectionId);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Small delay to ensure DOM is fully painted when coming from another page
+    setTimeout(() => {
+      const sectionId = location.hash.slice(1);
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   }, [location.pathname, location.hash]);
 
   useEffect(() => {
