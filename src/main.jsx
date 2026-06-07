@@ -8,7 +8,7 @@ import Services from './Pages/Services.jsx'
 import Privacy from './Pages/Privacy.jsx'
 import Terms from './Pages/Terms.jsx'
 import About from './Pages/About.jsx'
-import Providers from './Pages/Providers.jsx'
+import NotFound from './Pages/NotFound.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms />} />
           <Route path="about" element={<About />} />
-          <Route path="providers" element={<Providers />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
