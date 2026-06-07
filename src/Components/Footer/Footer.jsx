@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -37,17 +38,17 @@ export default function Footer() {
             "Wellness Care — Anytime, Anywhere"
           </p>
           <div className="flex gap-[0.5rem]">
-            <button className="w-[34px] h-[34px] rounded-[9px] bg-[rgba(255,255,255,0.06)] border-none flex items-center justify-center text-[0.85rem] cursor-pointer transition duration-150 text-white hover:bg-[rgba(255,255,255,0.1)]">
-              📸
+            <button className="w-[34px] h-[34px] rounded-[9px] bg-[rgba(255,255,255,0.06)] border-none flex items-center justify-center cursor-pointer transition duration-150 text-white hover:bg-[rgba(255,255,255,0.1)]">
+              <Instagram size={16} />
             </button>
-            <button className="w-[34px] h-[34px] rounded-[9px] bg-[rgba(255,255,255,0.06)] border-none flex items-center justify-center text-[0.85rem] cursor-pointer transition duration-150 text-white hover:bg-[rgba(255,255,255,0.1)]">
-              𝕏
+            <button className="w-[34px] h-[34px] rounded-[9px] bg-[rgba(255,255,255,0.06)] border-none flex items-center justify-center cursor-pointer transition duration-150 text-white hover:bg-[rgba(255,255,255,0.1)]">
+              <Twitter size={16} />
             </button>
-            <button className="w-[34px] h-[34px] rounded-[9px] bg-[rgba(255,255,255,0.06)] border-none flex items-center justify-center text-[0.85rem] cursor-pointer transition duration-150 text-white hover:bg-[rgba(255,255,255,0.1)]">
-              in
+            <button className="w-[34px] h-[34px] rounded-[9px] bg-[rgba(255,255,255,0.06)] border-none flex items-center justify-center cursor-pointer transition duration-150 text-white hover:bg-[rgba(255,255,255,0.1)]">
+              <Linkedin size={16} />
             </button>
-            <button className="w-[34px] h-[34px] rounded-[9px] bg-[rgba(255,255,255,0.06)] border-none flex items-center justify-center text-[0.85rem] cursor-pointer transition duration-150 text-white hover:bg-[rgba(255,255,255,0.1)]">
-              ▶
+            <button className="w-[34px] h-[34px] rounded-[9px] bg-[rgba(255,255,255,0.06)] border-none flex items-center justify-center cursor-pointer transition duration-150 text-white hover:bg-[rgba(255,255,255,0.1)]">
+              <Youtube size={16} />
             </button>
           </div>
         </div>
