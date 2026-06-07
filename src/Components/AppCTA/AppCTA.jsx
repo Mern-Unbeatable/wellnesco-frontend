@@ -1,3 +1,5 @@
+import { Apple, Play, Syringe, Activity, ShoppingBag, Check, Hash, Siren } from 'lucide-react';
+
 export default function AppCTA() {
   const submitApp = () => {
     const el = document.getElementById('app-inp');
@@ -40,14 +42,14 @@ export default function AppCTA() {
 
           <div className="flex gap-[0.75rem] flex-wrap mt-[1.8rem]">
             <button className="bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.1)] rounded-[12px] p-[0.55rem_1.2rem] flex items-center gap-[0.6rem] cursor-pointer transition duration-200 font-sans hover:bg-[rgba(255,255,255,0.12)]">
-              <span className="text-[1.2rem]">🍎</span>
+              <span className="flex items-center justify-center"><Apple size={24} className="text-white" /></span>
               <span className="text-left">
                 <span className="text-[0.57rem] text-[rgba(255,255,255,0.42)] block">Download on the</span>
                 <span className="text-[0.86rem] font-bold text-white block">App Store</span>
               </span>
             </button>
             <button className="bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.1)] rounded-[12px] p-[0.55rem_1.2rem] flex items-center gap-[0.6rem] cursor-pointer transition duration-200 font-sans hover:bg-[rgba(255,255,255,0.12)]">
-              <span className="text-[1.2rem]">▶</span>
+              <span className="flex items-center justify-center"><Play size={24} className="text-white" fill="currentColor" /></span>
               <span className="text-left">
                 <span className="text-[0.57rem] text-[rgba(255,255,255,0.42)] block">Get it on</span>
                 <span className="text-[0.86rem] font-bold text-white block">Google Play</span>
@@ -65,22 +67,22 @@ export default function AppCTA() {
                 <div className="font-serif text-[2.2rem] text-white leading-none">72</div>
               </div>
               <div className="bg-[rgba(255,255,255,0.06)] rounded-[9px] p-[8px_10px] flex items-center gap-[7px]">
-                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center text-[0.75rem] shrink-0 bg-[rgba(154,114,72,0.15)]">💉</div>
+                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center shrink-0 bg-[rgba(154,114,72,0.15)]"><Syringe size={12} className="text-gold" /></div>
                 <div className="text-[0.63rem] text-[rgba(255,255,255,0.45)] flex-1">Jessica M. — IV Hydration</div>
                 <div className="text-[0.63rem] font-semibold text-goldlt">8:00 PM</div>
               </div>
               <div className="bg-[rgba(255,255,255,0.06)] rounded-[9px] p-[8px_10px] flex items-center gap-[7px]">
-                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center text-[0.75rem] shrink-0 bg-[rgba(122,143,88,0.15)]">🧘</div>
+                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center shrink-0 bg-[rgba(122,143,88,0.15)]"><Activity size={12} className="text-sage" /></div>
                 <div className="text-[0.63rem] text-[rgba(255,255,255,0.45)] flex-1">Sofia R. — Pilates</div>
                 <div className="text-[0.63rem] font-semibold text-goldlt">Thu 7am</div>
               </div>
               <div className="bg-[rgba(255,255,255,0.06)] rounded-[9px] p-[8px_10px] flex items-center gap-[7px]">
-                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center text-[0.75rem] shrink-0 bg-[rgba(138,92,56,0.15)]">🤸</div>
+                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center shrink-0 bg-[rgba(138,92,56,0.15)]"><Activity size={12} className="text-gold" /></div>
                 <div className="text-[0.63rem] text-[rgba(255,255,255,0.45)] flex-1">James O. — Stretch</div>
                 <div className="text-[0.63rem] font-semibold text-goldlt">Fri 9am</div>
               </div>
               <div className="bg-[rgba(154,114,72,0.08)] rounded-[9px] p-[8px_10px] flex items-center gap-[7px]">
-                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center text-[0.75rem] shrink-0 bg-[rgba(154,114,72,0.2)]">🛍</div>
+                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center shrink-0 bg-[rgba(154,114,72,0.2)]"><ShoppingBag size={12} className="text-gold" /></div>
                 <div className="text-[0.63rem] text-[rgba(255,255,255,0.45)] flex-1">2 products matched today</div>
                 <div className="text-[0.63rem] font-semibold text-goldlt">View</div>
               </div>
@@ -91,17 +93,17 @@ export default function AppCTA() {
             <div className="bg-[rgba(255,255,255,0.04)] rounded-[20px] p-[12px] h-[220px] flex flex-col gap-[7px]">
               <div className="text-[0.52rem] text-[rgba(255,255,255,0.22)] uppercase tracking-[0.06em] mb-[6px]">Safety Center · Active</div>
               <div className="bg-[rgba(255,255,255,0.06)] rounded-[9px] p-[8px_10px] flex items-center gap-[7px]">
-                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center text-[0.75rem] shrink-0 bg-[rgba(160,184,120,0.12)]">✓</div>
+                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center shrink-0 bg-[rgba(160,184,120,0.12)]"><Check size={12} className="text-sage" /></div>
                 <div className="text-[0.63rem] text-[rgba(255,255,255,0.45)] flex-1">Face-matched</div>
                 <div className="text-[0.63rem] font-semibold text-sagelt">Active</div>
               </div>
               <div className="bg-[rgba(255,255,255,0.06)] rounded-[9px] p-[8px_10px] flex items-center gap-[7px]">
-                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center text-[0.75rem] shrink-0 bg-[rgba(160,184,120,0.12)]">🔢</div>
+                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center shrink-0 bg-[rgba(160,184,120,0.12)]"><Hash size={12} className="text-sage" /></div>
                 <div className="text-[0.63rem] text-[rgba(255,255,255,0.45)] flex-1">PIN: 7349</div>
                 <div className="text-[0.63rem] font-semibold text-sagelt">Ready</div>
               </div>
               <div className="bg-[rgba(255,255,255,0.06)] rounded-[9px] p-[8px_10px] flex items-center gap-[7px]">
-                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center text-[0.75rem] shrink-0 bg-[rgba(196,80,60,0.1)]">🚨</div>
+                <div className="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center shrink-0 bg-[rgba(196,80,60,0.1)]"><Siren size={12} className="text-[#c4503c]" /></div>
                 <div className="text-[0.63rem] text-[rgba(255,255,255,0.45)] flex-1">SOS — one tap</div>
                 <div className="text-[0.63rem] font-semibold text-[rgba(196,137,122,0.8)]">Always ready</div>
               </div>

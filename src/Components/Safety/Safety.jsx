@@ -1,3 +1,5 @@
+import { Camera, Smartphone, Hash, Timer, Siren, Users, Star } from 'lucide-react';
+
 export default function Safety() {
   return (
     <section className="bg-white py-[6rem] px-[5%]" id="safety">
@@ -25,7 +27,7 @@ export default function Safety() {
           
           <div className="flex flex-col gap-[0.6rem] mt-[2rem]">
             <div className="flex items-center gap-[0.9rem] p-[0.85rem_1rem] rounded-[var(--radius-r)] bg-cream border border-warm transition duration-200 cursor-default hover:border-[rgba(122,143,88,0.25)] hover:bg-[rgba(122,143,88,0.04)]">
-              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center">📸</div>
+              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center"><Camera size={18} className="text-gold" /></div>
               <div>
                 <div className="text-[0.86rem] font-semibold text-deep">Live Face-Match Verification</div>
                 <div className="text-[0.73rem] text-soft mt-[1px]">Real-time selfie matched to verified profile before arrival</div>
@@ -34,7 +36,7 @@ export default function Safety() {
             </div>
 
             <div className="flex items-center gap-[0.9rem] p-[0.85rem_1rem] rounded-[var(--radius-r)] bg-cream border border-warm transition duration-200 cursor-default hover:border-[rgba(122,143,88,0.25)] hover:bg-[rgba(122,143,88,0.04)]">
-              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center">📱</div>
+              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center"><Smartphone size={18} className="text-gold" /></div>
               <div>
                 <div className="text-[0.86rem] font-semibold text-deep">One-Time QR Code Check-In</div>
                 <div className="text-[0.73rem] text-soft mt-[1px]">Time-limited, one-use — provider scans at your door</div>
@@ -43,7 +45,7 @@ export default function Safety() {
             </div>
 
             <div className="flex items-center gap-[0.9rem] p-[0.85rem_1rem] rounded-[var(--radius-r)] bg-cream border border-warm transition duration-200 cursor-default hover:border-[rgba(122,143,88,0.25)] hover:bg-[rgba(122,143,88,0.04)]">
-              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center">🔢</div>
+              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center"><Hash size={18} className="text-gold" /></div>
               <div>
                 <div className="text-[0.86rem] font-semibold text-deep">Verbal 4-Digit PIN</div>
                 <div className="text-[0.73rem] text-soft mt-[1px]">Provider confirms aloud before you open the door</div>
@@ -52,7 +54,7 @@ export default function Safety() {
             </div>
 
             <div className="flex items-center gap-[0.9rem] p-[0.85rem_1rem] rounded-[var(--radius-r)] bg-cream border border-warm transition duration-200 cursor-default hover:border-[rgba(122,143,88,0.25)] hover:bg-[rgba(122,143,88,0.04)]">
-              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center">⏱</div>
+              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center"><Timer size={18} className="text-gold" /></div>
               <div>
                 <div className="text-[0.86rem] font-semibold text-deep">Bidirectional 15-Min Pings</div>
                 <div className="text-[0.73rem] text-soft mt-[1px]">Both parties. Auto-alert trusted contacts if missed</div>
@@ -61,7 +63,7 @@ export default function Safety() {
             </div>
 
             <div className="flex items-center gap-[0.9rem] p-[0.85rem_1rem] rounded-[var(--radius-r)] bg-cream border border-warm transition duration-200 cursor-default hover:border-[rgba(122,143,88,0.25)] hover:bg-[rgba(122,143,88,0.04)]">
-              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center">🚨</div>
+              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center"><Siren size={18} className="text-gold" /></div>
               <div>
                 <div className="text-[0.86rem] font-semibold text-deep">SOS Emergency Button</div>
                 <div className="text-[0.73rem] text-soft mt-[1px]">One tap → GPS to contacts, platform alert, emergency services</div>
@@ -70,7 +72,7 @@ export default function Safety() {
             </div>
 
             <div className="flex items-center gap-[0.9rem] p-[0.85rem_1rem] rounded-[var(--radius-r)] bg-cream border border-warm transition duration-200 cursor-default hover:border-[rgba(122,143,88,0.25)] hover:bg-[rgba(122,143,88,0.04)]">
-              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center">👥</div>
+              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center"><Users size={18} className="text-gold" /></div>
               <div>
                 <div className="text-[0.86rem] font-semibold text-deep">Trusted Contact Live Tracking</div>
                 <div className="text-[0.73rem] text-soft mt-[1px]">Family or friends get a live GPS link for every session</div>
@@ -79,7 +81,7 @@ export default function Safety() {
             </div>
 
             <div className="flex items-center gap-[0.9rem] p-[0.85rem_1rem] rounded-[var(--radius-r)] bg-cream border border-warm transition duration-200 cursor-default hover:border-[rgba(122,143,88,0.25)] hover:bg-[rgba(122,143,88,0.04)]">
-              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center">⭐</div>
+              <div className="text-[1.1rem] shrink-0 w-[36px] h-[36px] rounded-[9px] bg-white shadow-sh flex items-center justify-center"><Star size={18} className="text-gold" /></div>
               <div>
                 <div className="text-[0.86rem] font-semibold text-deep">Two-Way Rating Lock</div>
                 <div className="text-[0.73rem] text-soft mt-[1px]">Reviews unlock only after both parties confirm safe end</div>

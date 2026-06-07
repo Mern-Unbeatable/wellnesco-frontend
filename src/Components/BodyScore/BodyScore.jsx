@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Moon, Zap, Brain, Leaf, Watch, Activity, Syringe, Wind } from 'lucide-react';
 
 export default function BodyScore() {
   useEffect(() => {
@@ -28,27 +29,27 @@ export default function BodyScore() {
           
           <div className="mt-[1.5rem] flex flex-col gap-[0.6rem]">
             <div className="flex items-center gap-[0.85rem] bg-white rounded-[var(--radius-r)] p-[0.8rem_1rem] shadow-sh">
-              <span className="text-[1rem]">😴</span>
+              <span className="text-[1rem] flex items-center justify-center w-[24px]"><Moon size={20} className="text-gold" /></span>
               <span className="text-[0.83rem] font-medium text-deep flex-1">Sleep quality & duration</span>
               <span className="text-[0.72rem] text-muted">35%</span>
             </div>
             <div className="flex items-center gap-[0.85rem] bg-white rounded-[var(--radius-r)] p-[0.8rem_1rem] shadow-sh">
-              <span className="text-[1rem]">⚡</span>
+              <span className="text-[1rem] flex items-center justify-center w-[24px]"><Zap size={20} className="text-gold" /></span>
               <span className="text-[0.83rem] font-medium text-deep flex-1">Energy level</span>
               <span className="text-[0.72rem] text-muted">30%</span>
             </div>
             <div className="flex items-center gap-[0.85rem] bg-white rounded-[var(--radius-r)] p-[0.8rem_1rem] shadow-sh">
-              <span className="text-[1rem]">🧠</span>
+              <span className="text-[1rem] flex items-center justify-center w-[24px]"><Brain size={20} className="text-gold" /></span>
               <span className="text-[0.83rem] font-medium text-deep flex-1">Stress level</span>
               <span className="text-[0.72rem] text-muted">20%</span>
             </div>
             <div className="flex items-center gap-[0.85rem] bg-white rounded-[var(--radius-r)] p-[0.8rem_1rem] shadow-sh">
-              <span className="text-[1rem]">🌿</span>
+              <span className="text-[1rem] flex items-center justify-center w-[24px]"><Leaf size={20} className="text-gold" /></span>
               <span className="text-[0.83rem] font-medium text-deep flex-1">Mood</span>
               <span className="text-[0.72rem] text-muted">15%</span>
             </div>
             <div className="flex items-center gap-[0.85rem] bg-sagedim border border-[rgba(122,143,88,0.18)] rounded-[var(--radius-r)] p-[0.8rem_1rem]">
-              <span className="text-[1rem]">⌚</span>
+              <span className="text-[1rem] flex items-center justify-center w-[24px]"><Watch size={20} className="text-gold" /></span>
               <span className="text-[0.83rem] font-medium text-deep flex-1">Oura · Apple Watch · WHOOP · Garmin</span>
               <span className="text-[0.68rem] font-semibold text-sage">Optional</span>
             </div>
@@ -120,7 +121,7 @@ export default function BodyScore() {
               <div className="text-[0.53rem] text-[rgba(255,255,255,0.25)] uppercase tracking-[0.07em] mb-[7px]">Matched for you tonight</div>
               
               <div className="flex items-center gap-[8px] bg-[rgba(255,255,255,0.05)] rounded-[9px] p-[7px_9px] mb-[5px] cursor-pointer transition duration-150 hover:bg-[rgba(255,255,255,0.08)]">
-                <span className="text-[0.85rem] shrink-0">🤸</span>
+                <span className="text-[0.85rem] shrink-0 flex items-center justify-center w-[20px]"><Activity size={16} className="text-gold" /></span>
                 <div className="flex-1">
                   <div className="text-[0.68rem] font-semibold text-white">Assisted Stretch</div>
                   <div className="text-[0.58rem] text-[rgba(255,255,255,0.3)]">Neck soreness · $85</div>
@@ -129,7 +130,7 @@ export default function BodyScore() {
               </div>
               
               <div className="flex items-center gap-[8px] bg-[rgba(255,255,255,0.05)] rounded-[9px] p-[7px_9px] mb-[5px] cursor-pointer transition duration-150 hover:bg-[rgba(255,255,255,0.08)]">
-                <span className="text-[0.85rem] shrink-0">💉</span>
+                <span className="text-[0.85rem] shrink-0 flex items-center justify-center w-[20px]"><Syringe size={16} className="text-gold" /></span>
                 <div className="flex-1">
                   <div className="text-[0.68rem] font-semibold text-white">IV Hydration</div>
                   <div className="text-[0.58rem] text-[rgba(255,255,255,0.3)]">Low energy · $149</div>
@@ -138,7 +139,7 @@ export default function BodyScore() {
               </div>
 
               <div className="flex items-center gap-[8px] bg-[rgba(255,255,255,0.05)] rounded-[9px] p-[7px_9px] mb-[5px] cursor-pointer transition duration-150 hover:bg-[rgba(255,255,255,0.08)]">
-                <span className="text-[0.85rem] shrink-0">🌬️</span>
+                <span className="text-[0.85rem] shrink-0 flex items-center justify-center w-[20px]"><Wind size={16} className="text-gold" /></span>
                 <div className="flex-1">
                   <div className="text-[0.68rem] font-semibold text-white">Breathwork</div>
                   <div className="text-[0.58rem] text-[rgba(255,255,255,0.3)]">Stress high · $75</div>

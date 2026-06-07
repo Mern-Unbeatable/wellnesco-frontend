@@ -1,3 +1,5 @@
+import { Calendar, Gift, PartyPopper, Star, Users, ShoppingBag } from 'lucide-react';
+
 export default function Membership() {
   return (
     <section className="bg-cream py-[6rem] px-[5%]" id="membership">
@@ -119,32 +121,32 @@ export default function Membership() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[0.7rem]">
             <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.07)] rounded-[var(--radius-r)] p-[1rem]">
-              <div className="text-[1.3rem] mb-[0.45rem]">📅</div>
+              <div className="mb-[0.45rem]"><Calendar size={24} className="text-gold" /></div>
               <div className="text-[0.82rem] font-semibold text-white mb-[0.25rem]">Book 5, Get 6th Free</div>
               <div className="text-[0.73rem] text-[rgba(255,255,255,0.35)] leading-[1.5]">Complete 5 sessions in any category in 60 days — the 6th is credited automatically.</div>
             </div>
             <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.07)] rounded-[var(--radius-r)] p-[1rem]">
-              <div className="text-[1.3rem] mb-[0.45rem]">🎁</div>
+              <div className="mb-[0.45rem]"><Gift size={24} className="text-gold" /></div>
               <div className="text-[0.82rem] font-semibold text-white mb-[0.25rem]">Monthly Member Special</div>
               <div className="text-[0.73rem] text-[rgba(255,255,255,0.35)] leading-[1.5]">Every first Monday: one service 25–35% off for 48 hours only.</div>
             </div>
             <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.07)] rounded-[var(--radius-r)] p-[1rem]">
-              <div className="text-[1.3rem] mb-[0.45rem]">🎂</div>
+              <div className="mb-[0.45rem]"><PartyPopper size={24} className="text-gold" /></div>
               <div className="text-[0.82rem] font-semibold text-white mb-[0.25rem]">Birthday Month Benefit</div>
               <div className="text-[0.73rem] text-[rgba(255,255,255,0.35)] leading-[1.5]">10 free credits + curated gift. Inner Circle: a complimentary session.</div>
             </div>
             <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.07)] rounded-[var(--radius-r)] p-[1rem]">
-              <div className="text-[1.3rem] mb-[0.45rem]">⭐</div>
+              <div className="mb-[0.45rem]"><Star size={24} className="text-gold" /></div>
               <div className="text-[0.82rem] font-semibold text-white mb-[0.25rem]">Check-In Streak Bonus</div>
               <div className="text-[0.73rem] text-[rgba(255,255,255,0.35)] leading-[1.5]">7 days: +1 credit. 30 days: +5. 90 days: free session. The habit loop.</div>
             </div>
             <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.07)] rounded-[var(--radius-r)] p-[1rem]">
-              <div className="text-[1.3rem] mb-[0.45rem]">👥</div>
+              <div className="mb-[0.45rem]"><Users size={24} className="text-gold" /></div>
               <div className="text-[0.82rem] font-semibold text-white mb-[0.25rem]">Refer & Earn</div>
               <div className="text-[0.73rem] text-[rgba(255,255,255,0.35)] leading-[1.5]">10 credits per referral. Inner Circle earns 10% of fees for 12 months.</div>
             </div>
             <div className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.07)] rounded-[var(--radius-r)] p-[1rem]">
-              <div className="text-[1.3rem] mb-[0.45rem]">🛍</div>
+              <div className="mb-[0.45rem]"><ShoppingBag size={24} className="text-gold" /></div>
               <div className="text-[0.82rem] font-semibold text-white mb-[0.25rem]">Shop & Earn</div>
               <div className="text-[0.73rem] text-[rgba(255,255,255,0.35)] leading-[1.5]">$5 spent in the Shop = 1 point. 50 points = 1 booking credit.</div>
             </div>

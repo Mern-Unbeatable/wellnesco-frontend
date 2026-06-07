@@ -1,3 +1,5 @@
+import { Zap, Calendar, CreditCard, Bell, Car } from 'lucide-react';
+
 export default function Lifestyle() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px] rv">
@@ -20,35 +22,35 @@ export default function Lifestyle() {
           </h2>
           <ul className="list-none mt-[1.5rem] flex flex-col gap-[0.85rem]">
             <li className="flex items-start gap-[0.85rem] text-[0.9rem] text-mid leading-[1.5]">
-              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0">⚡</span>
+              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0"><Zap size={18} className="text-gold" /></span>
               <div>
                 <strong className="text-deep text-[0.88rem]">Instant Rebooking</strong><br />
                 One tap to rebook — pre-fills everything. Under 5 seconds.
               </div>
             </li>
             <li className="flex items-start gap-[0.85rem] text-[0.9rem] text-mid leading-[1.5]">
-              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0">📅</span>
+              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0"><Calendar size={18} className="text-gold" /></span>
               <div>
                 <strong className="text-deep text-[0.88rem]">Calendar Sync</strong><br />
                 Apple Calendar, Google, Outlook. Reminders before every session.
               </div>
             </li>
             <li className="flex items-start gap-[0.85rem] text-[0.9rem] text-mid leading-[1.5]">
-              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0">💳</span>
+              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0"><CreditCard size={18} className="text-gold" /></span>
               <div>
                 <strong className="text-deep text-[0.88rem]">Apple Pay & Tipping</strong><br />
                 One-tap payment. 100% of tips to your provider, always.
               </div>
             </li>
             <li className="flex items-start gap-[0.85rem] text-[0.9rem] text-mid leading-[1.5]">
-              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0">🔔</span>
+              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0"><Bell size={18} className="text-gold" /></span>
               <div>
                 <strong className="text-deep text-[0.88rem]">Smart Stress Alerts</strong><br />
                 &quot;Your stress indicators are elevated. Breathwork · IV · Stretch. Tap to book.&quot;
               </div>
             </li>
             <li className="flex items-start gap-[0.85rem] text-[0.9rem] text-mid leading-[1.5]">
-              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0">🚗</span>
+              <span className="w-[36px] h-[36px] rounded-[10px] bg-white shadow-sh flex items-center justify-center text-[1rem] shrink-0"><Car size={18} className="text-gold" /></span>
               <div>
                 <strong className="text-deep text-[0.88rem]">Car Service</strong><br />
                 Can&apos;t receive at home? We arrange a luxury transfer to a partner suite.

@@ -1,3 +1,5 @@
+import { BarChart2, Search, Clapperboard, Check } from 'lucide-react';
+
 export default function HowItWorks() {
   return (
     <section className="bg-cream py-[6rem] px-[5%]">
@@ -15,7 +17,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-warm rounded-[var(--radius-rxl)] overflow-hidden shadow-sh rv">
           <div className="bg-white py-[2.2rem] px-[1.8rem] border-b md:border-b-0 md:border-r border-warm transition duration-200 cursor-default hover:bg-cream">
             <div className="font-serif text-[2.8rem] font-light text-parch leading-none mb-[0.7rem]">01</div>
-            <div className="text-[1.6rem] mb-[0.7rem]">📊</div>
+            <div className="mb-[0.7rem]"><BarChart2 size={28} className="text-gold" /></div>
             <div className="text-[0.92rem] font-bold text-deep mb-[0.4rem]">Your score is waiting</div>
             <div className="text-[0.8rem] text-soft leading-[1.65]">
               Open the app and see your daily Body Score — driven by your check-in or wearable. Personalized recommendations are already there.
@@ -23,7 +25,7 @@ export default function HowItWorks() {
           </div>
           <div className="bg-white py-[2.2rem] px-[1.8rem] border-b lg:border-b-0 lg:border-r border-warm transition duration-200 cursor-default hover:bg-cream">
             <div className="font-serif text-[2.8rem] font-light text-parch leading-none mb-[0.7rem]">02</div>
-            <div className="text-[1.6rem] mb-[0.7rem]">🔍</div>
+            <div className="mb-[0.7rem]"><Search size={28} className="text-gold" /></div>
             <div className="text-[0.92rem] font-bold text-deep mb-[0.4rem]">Browse 30+ categories</div>
             <div className="text-[0.8rem] text-soft leading-[1.65]">
               Filter by tonight, after hours, or schedule ahead. Every provider is background-checked, licensed, and reviewed.
@@ -31,7 +33,7 @@ export default function HowItWorks() {
           </div>
           <div className="bg-white py-[2.2rem] px-[1.8rem] border-b md:border-b-0 md:border-r border-warm transition duration-200 cursor-default hover:bg-cream">
             <div className="font-serif text-[2.8rem] font-light text-parch leading-none mb-[0.7rem]">03</div>
-            <div className="text-[1.6rem] mb-[0.7rem]">🎬</div>
+            <div className="mb-[0.7rem]"><Clapperboard size={28} className="text-gold" /></div>
             <div className="text-[0.92rem] font-bold text-deep mb-[0.4rem]">Watch their intro video</div>
             <div className="text-[0.8rem] text-soft leading-[1.65]">
               Know their face, voice and energy before they knock. A 60-second face-to-camera intro kills the &quot;stranger at my door&quot; anxiety.
@@ -39,7 +41,7 @@ export default function HowItWorks() {
           </div>
           <div className="bg-white py-[2.2rem] px-[1.8rem] transition duration-200 cursor-default hover:bg-cream">
             <div className="font-serif text-[2.8rem] font-light text-parch leading-none mb-[0.7rem]">04</div>
-            <div className="text-[1.6rem] mb-[0.7rem]">✓</div>
+            <div className="mb-[0.7rem]"><Check size={28} className="text-gold" /></div>
             <div className="text-[0.92rem] font-bold text-deep mb-[0.4rem]">Confirm, pay, relax</div>
             <div className="text-[0.8rem] text-soft leading-[1.65]">
               Apple Pay in one tap. Seven safety layers activate automatically. Your wellness record updates after every session.
